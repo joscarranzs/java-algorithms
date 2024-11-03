@@ -6,6 +6,11 @@ public class Fibonacci {
   */
 
   public static int traditional(int n) {
+    // If n is negative, throw an exception
+    if (n < 0) {
+      throw new IllegalArgumentException("n must be greater than or equal to 0");
+    }
+
     // If n is 0 or 1, return n
     if (n == 0) {
       return 0;
@@ -23,6 +28,11 @@ public class Fibonacci {
    */
 
   public static int[] vector(int n) {
+    // If n is negative, throw an exception
+    if (n < 0) {
+      throw new IllegalArgumentException("n must be greater than or equal to 0");
+    }
+
     int[] fibonacci = new int[n+1];
     fibonacci[0] = 0;
     fibonacci[1] = 1;
